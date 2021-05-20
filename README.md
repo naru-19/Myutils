@@ -11,7 +11,7 @@ pip install git+https://github.com/naru-19/Myutils
 *sample.py*
 
 ```python
-from deco import *
+from narutils import *
 decopri_title("naru","narudayo")
 print("")
 print("")
