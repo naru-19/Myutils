@@ -1,7 +1,7 @@
 def decopri(txt):
     print("-"*80)
-    if len(txt)<80:
-        print(" "*int((80-len(txt))/2)+str(txt)+" "*int((80-len(txt))/2))
+    if len(str(txt))<80:
+        print(" "*int((80-len(str(txt)))/2)+str(txt)+" "*int((80-len(str(txt)))/2))
     else:
         print(str(txt))
     print("-" * 80)
@@ -13,8 +13,8 @@ def decopri_title(title,txt):
     # else:
     #     print(str(title))
     txt=title+" :"+str(txt)
-    if len(txt)<80:
-        print(" "*int((80-len(txt))/2)+str(txt)+" "*int((80-len(txt))/2))
+    if len(str(txt))<80:
+        print(" "*int((80-len(str(txt)))/2)+str(txt)+" "*int((80-len(str(txt)))/2))
     else:
         print(str(txt))
     print("-" * 80)
