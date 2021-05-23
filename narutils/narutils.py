@@ -45,7 +45,7 @@ def decopri_title(title,txt):
 
 import matplotlib.pyplot as plt
 import os
-def showgraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
+def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
     title=str(title)
     fname=filepath+title+".png"
     fig = plt.figure()
