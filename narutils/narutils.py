@@ -55,7 +55,7 @@ def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=Fal
     ax.plot(x, y,c="b")
     if os.path.isfile(fname):
         if overwrite:
-            print("caution:There was a file with the same name, but you overwrote it.")
+            print("caution:There was a file with the same name and you overwrote it.")
             fig.savefig(fname)
         else :
             print("Error:There is a same name file, please change file name.")
