@@ -42,5 +42,22 @@ def decopri_title(title,txt):
         print(str(txt))
     print("☆" * 80)
     
-    
-    
+
+import matplotlib.pyplot as plt
+import os
+def showgraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
+    title=str(title)
+    fname=filepath+title+".png"
+    fig = plt.figure()
+    ax = fig.add_subplot(111, xlabel=xlabel, ylabel=ylabel)
+    fig.suptitle(title)
+    ax.plot(x, y,c="b")
+    if os.path.isfile(fname):
+        if overwrite:
+            print("caution:There was a file with the same name, but you overwrote it.")
+            fig.savefig(fname)
+        else :
+            print("Error:There is a same name file, please change file name.")
+    else :
+        fig.savefig(fname)
+
