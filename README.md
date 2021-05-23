@@ -43,5 +43,20 @@ savegraph(x=x,y=y,title="test",xlabel="x",ylabel="y",filepath="./",overwrite=Fal
 ```
 
 *output*
+
 (saved as ./test.png)
+
+
+
 ![test](https://user-images.githubusercontent.com/61283753/119245185-2c7e9c80-bbb2-11eb-8686-8b0d8c484dbd.png)
+
+
+
+|   argument    |                         description                          |
+| :-----------: | :----------------------------------------------------------: |
+|      x,y      |                             x,y                              |
+|     title     |                         graph title                          |
+| xlabel,ylabel |                  x-axis label,y-axis label                   |
+|   filepath    |                   filepath for save figure                   |
+|   overwrite   | If there is a same name file,<br> you can over write it when overwrite=True |
+
