@@ -48,7 +48,7 @@ import os
 import sys
 def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
     title=str(title)
-    fname=filepath+title+".png"
+    fname=os.path.join(filepath,title+".png")
     fig = plt.figure()
     ax = fig.add_subplot(111, xlabel=xlabel, ylabel=ylabel)
     fig.suptitle(title)
