@@ -45,6 +45,7 @@ def decopri_title(title,txt):
 
 import matplotlib.pyplot as plt
 import os
+import sys
 def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
     title=str(title)
     fname=filepath+title+".png"
@@ -58,6 +59,7 @@ def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=Fal
             fig.savefig(fname)
         else :
             print("Error:There is a same name file, please change file name.")
+            sys.exit()
     else :
         fig.savefig(fname)
 
