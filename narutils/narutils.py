@@ -29,7 +29,7 @@ def decost(txt):
         print(str(txt))
     print("☆" * 80)
     
-def decopri_title(title,txt):
+def decopri_title_st(title,txt):
     # print("-"*80)
     # if len(title)<80:
     #     print(" "*int((80-len(title))/2)+str(title)+" "*int((80-len(title))/2))
