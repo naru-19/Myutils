@@ -43,6 +43,8 @@ def decopri_title_st(title,txt):
     print("☆" * 80)
     
 
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import os
 import sys
