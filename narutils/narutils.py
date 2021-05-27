@@ -33,6 +33,7 @@ def decopri_title_st(title,txt):
     # print("-"*80)
     # if len(title)<80:
     #     print(" "*int((80-len(title))/2)+str(title)+" "*int((80-len(title))/2))
+    
     # else:
     #     print(str(title))
     txt=title+" :"+str(txt)
@@ -64,4 +65,17 @@ def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=Fal
             sys.exit()
     else :
         fig.savefig(fname)
-
+        
+import random
+def randcol(n,norm=False):
+    if n>20:
+        print("caution:You should reduce the number of colors a little bit.")
+    li=list(range(0,256,5))
+    col=[]
+    for i in range(3):
+        if norm:
+            col.append([float(random.randint(0,len(li))*5)/255 for j in range(n)])            
+        else :
+            col.append([random.randint(0,len(li))*5 for j in range(n)])
+    col=np.array(col)
+    return col.reshape(col.shape[1],3)
