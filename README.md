@@ -71,7 +71,7 @@ from narutils import *
 decopri("norm=True")
 col=randcol(15,True)
 display(col)
-decopri(norm="False")
+decopri("norm=False")
 col=randcol(15,False)
 display(col)
 ```
