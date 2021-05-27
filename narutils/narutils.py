@@ -49,6 +49,7 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import os
 import sys
+import numpy as np
 def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
     title=str(title)
     fname=os.path.join(filepath,title+".png")
