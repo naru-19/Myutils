@@ -21,15 +21,15 @@ def decopri_title(title,txt):
 
     
     
-def decost(txt):
-    print("☆"*80)
+def decopl(txt):
+    print("+"*80)
     if len(str(txt))<80:
         print(" "*int((80-len(str(txt)))/2)+str(txt)+" "*int((80-len(str(txt)))/2))
     else:
         print(str(txt))
-    print("☆" * 80)
+    print("+" * 80)
     
-def decopri_title_st(title,txt):
+def decopri_title_pl(title,txt):
     # print("-"*80)
     # if len(title)<80:
     #     print(" "*int((80-len(title))/2)+str(title)+" "*int((80-len(title))/2))
@@ -41,7 +41,7 @@ def decopri_title_st(title,txt):
         print(" "*int((80-len(str(txt)))/2)+str(txt)+" "*int((80-len(str(txt)))/2))
     else:
         print(str(txt))
-    print("☆" * 80)
+    print("+" * 80)
     
 
 import matplotlib
