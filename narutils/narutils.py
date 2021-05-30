@@ -92,7 +92,7 @@ def rgb2hex(rgb):
         else:
             hex+=str(int(cop[i]/16))
             cop[i]%=16
-        if cop[i]>10:
+        if cop[i]>=10:
             hex+=li[cop[i]-10]
         else:
             hex+=str(cop[i])
