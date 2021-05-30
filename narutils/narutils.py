@@ -80,3 +80,19 @@ def randcol(n,norm=False):
             col.append([random.randint(0,len(li))*5 for j in range(n)])
     col=np.array(col)
     return col.reshape(col.shape[1],3)
+
+def rgb2hex(rgb):
+    li=["a","b","c","d","e","f"]
+    hex=""
+    for i in range(3):
+        if rgb[i]/16>=10:
+            hex+=li[int(rgb[i]/16)-10]
+            rgb[i]%=16
+        else:
+            hex+=str(int(rgb[i]/16))
+            rgb[i]%=16
+        if rgb[i]>10:
+            hex+=li[rgb[i]-10]
+        else:
+            hex+=str(rgb[i])
+    return hex
