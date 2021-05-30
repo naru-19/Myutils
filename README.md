@@ -116,3 +116,29 @@ array([[160,  15,  80],
        [ 30, 185, 165],
        [ 45,  15, 155]])
 ```
+
+
+## 4.rgb to hex
+
+*sample.py*
+```python
+from narutils import *
+
+rgb=[255,255,255]
+hex=rgb2hex(rgb)
+print(hex)
+
+rgb=[180,200,25]
+hex=rgb2hex(rgb)
+print(hex)
+
+```
+
+*output*
+
+```
+ffffff
+b4c819
+```
+
+
