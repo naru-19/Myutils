@@ -74,7 +74,7 @@ def randcol(n,norm=False):
     li=list(range(0,256,5))
     col=[]
     for i in range(3):
-        if norm:å
+        if norm:
             col.append([float(random.randint(0,len(li))*5)/255 for j in range(n)])            
         else :
             col.append([li[random.randint(0,len(li)-1)] for j in range(n)])
