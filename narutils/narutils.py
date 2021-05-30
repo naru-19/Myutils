@@ -74,25 +74,26 @@ def randcol(n,norm=False):
     li=list(range(0,256,5))
     col=[]
     for i in range(3):
-        if norm:
+        if norm:å
             col.append([float(random.randint(0,len(li))*5)/255 for j in range(n)])            
         else :
-            col.append([random.randint(0,len(li))*5 for j in range(n)])
+            col.append([li[random.randint(0,len(li)-1)] for j in range(n)])
     col=np.array(col)
     return col.reshape(col.shape[1],3)
 
 def rgb2hex(rgb):
+    cop=rgb.copy()
     li=["a","b","c","d","e","f"]
     hex=""
     for i in range(3):
-        if rgb[i]/16>=10:
-            hex+=li[int(rgb[i]/16)-10]
-            rgb[i]%=16
+        if cop[i]/16>=10:
+            hex+=li[int(cop[i]/16)-10]
+            cop[i]%=16
         else:
-            hex+=str(int(rgb[i]/16))
-            rgb[i]%=16
-        if rgb[i]>10:
-            hex+=li[rgb[i]-10]
+            hex+=str(int(cop[i]/16))
+            cop[i]%=16
+        if cop[i]>10:
+            hex+=li[cop[i]-10]
         else:
-            hex+=str(rgb[i])
+            hex+=str(cop[i])
     return hex
