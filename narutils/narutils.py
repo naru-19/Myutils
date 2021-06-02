@@ -97,3 +97,10 @@ def rgb2hex(rgb):
         else:
             hex+=str(cop[i])
     return hex
+
+def create_dir(dirname):
+    if not os.path.exists(dirname):
+        os.mkdir(dirname)
+    else :
+        print("Caution:The directry already exists, so skipped this operation.")
+
