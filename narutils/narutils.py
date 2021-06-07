@@ -104,3 +104,12 @@ def create_dir(dirname):
     else :
         print("Caution:The directry already exists, so skipped this operation.")
 
+def makedir(paths):
+    plist=paths.split("/")
+    for i in range(1,len(plist)):
+        plist[i]=plist[i-1]+"/"+plist[i]
+    for d in plist:
+        p=d+"/"
+        if not os.path.exists(d):
+            os.mkdir(d)
+    print(f"successfully end makedir:{paths}")
