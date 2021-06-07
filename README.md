@@ -141,4 +141,18 @@ ffffff
 b4c819
 ```
 
+## 5.makedir
+
+*sample.py*
+```python
+from narutils import *
+paths="./test1/test2/test3"
+makedir(paths)
+```
+*output*
+
+![スクリーンショット 2021-06-07 18 23 43](https://user-images.githubusercontent.com/61283753/120993109-32819980-c7be-11eb-9892-4c0ac44cf2b4.png)
+
+
+
 
