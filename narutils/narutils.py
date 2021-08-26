@@ -49,6 +49,7 @@ matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import os
 import sys
+import time
 import numpy as np
 def savegraph(x,y,title=None,xlabel=None,ylabel=None,filepath="./",overwrite=False):
     title=str(title)
@@ -113,3 +114,8 @@ def makedir(paths):
         if not os.path.exists(d):
             os.mkdir(d)
     print(f"successfully end makedir:{paths}")
+
+def ovwrite(text):
+    sys.stdout.write('\r'+str(text))
+    sys.stdout.flush()
+    time.sleep(0.01)
