@@ -1,3 +1,11 @@
+def log_string(log_dir,txt):
+    log = open(log_dir,'w')
+    log.write(str(txt)+'\n')
+    log.flush()
+    log.close
+    print(str(txt))
+
+
 def decopri(txt):
     print("-"*80)
     if len(str(txt))<80:
