@@ -153,6 +153,15 @@ makedir(paths)
 
 ![スクリーンショット 2021-06-07 18 23 43](https://user-images.githubusercontent.com/61283753/120993109-32819980-c7be-11eb-9892-4c0ac44cf2b4.png)
 
+## 6.log_string
+```python
+log_string('log.txt','test')
+```
+のように使う
+log.txtにtestと書き込まれる
+
+
+
 
 
 
