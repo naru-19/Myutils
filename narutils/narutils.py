@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sys
 import time 
 import numpy as np 
@@ -9,7 +10,12 @@ def ovwrite(text):
     sys.stdout.write('\r'+str(text))
     sys.stdout.flush()
     time.sleep(0.01)
-
+def log_string(log_dir,txt):
+    log = open(log_dir,'w')
+    log.write(str(txt)+'\n')
+    log.flush()
+    log.close
+    print(str(txt))
 def loadasdf(fpath):
     if not os.path.exists(fpath):
         print('no such file')
