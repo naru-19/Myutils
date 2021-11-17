@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import sys
 import time 
 import numpy as np 
@@ -48,6 +47,11 @@ def dfc(s=None):
 def vc(s):
     _vc = s.value_counts()
     return _vc
+def sin(theta):
+    return math.sin(theta)
+def cos(theta):
+    return math.cos(theta) 
+
 
 
 
