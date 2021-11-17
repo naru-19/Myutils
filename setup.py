@@ -3,6 +3,16 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+def get_install_requires():
+    install_requires = [
+        'tqdm',
+        'numpy',
+        'matplotlib',
+        'seaborn',
+        'pandas',
+    ]
+    return install_requires
+
 setuptools.setup(
     name="narutils",
     version="0.1.0",
@@ -12,6 +22,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/naru-19/Myutils",
+    install_requires=get_install_requires(),
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
