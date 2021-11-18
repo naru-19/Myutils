@@ -6,6 +6,7 @@ import time
 from tqdm import tqdm 
 import math
 import argparse
+import os
 def ovwrite(text):
     sys.stdout.write('\r'+str(text))
     sys.stdout.flush()
