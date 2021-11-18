@@ -22,9 +22,9 @@ def loadasdf(fpath):
         print('no such file')
         sys.exit()
     if fpath[-3:]=="npy":
-        return pd.DataFrame(np.load(fp))
+        return pd.DataFrame(np.load(fpath))
     elif fpath[-3:]=="txt":
-        return pd.read_csv(fp,sep="\s+",header=None)
+        return pd.read_csv(fpath,sep="\s+",header=None)
     else:
         print("Unknown format")
 
