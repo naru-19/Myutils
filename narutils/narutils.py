@@ -5,6 +5,7 @@ import pandas as pd
 import time 
 from tqdm import tqdm 
 import math
+import argparse
 def ovwrite(text):
     sys.stdout.write('\r'+str(text))
     sys.stdout.flush()
@@ -36,6 +37,7 @@ def decopri(txt,op_len=80,op_mark='-'):
     else:
         print(txt)
     print(f'{op_mark*op_len}')
+
 def now(s=None):
     if not s:
         return time.time()
@@ -52,6 +54,14 @@ def sin(theta):
 def cos(theta):
     return math.cos(theta) 
 
+class ParseSimple():
+    def __init__(self,args_list):
+        self.parser = argparse.ArgumentParser()
+        for arg in args_list:
+            self.add_arg(arg)
+        self.flags=self.parser.parse_args()
+    def add_arg(self,argument):
+        self.parser.add_argument(str(argument[0]),type=argument[1],default=argument[2],help=argument[3])
 
 
 
@@ -68,3 +78,4 @@ if __name__=='__main__':
     df = dfc()
     df[0]=[1,2,3,]
     print(df)
+
