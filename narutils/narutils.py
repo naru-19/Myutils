@@ -64,7 +64,8 @@ class ParseSimple():
     def add_arg(self,argument):
         self.parser.add_argument(str(argument[0]),type=argument[1],default=argument[2],help=argument[3])
 
-
+def mkdirs(path):
+    os.makedirs(path, exist_ok=True)
 
 if __name__=='__main__':
     s = now()
