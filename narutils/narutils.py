@@ -47,6 +47,12 @@ def now(s=None):
 def dfc(s=None):
     return pd.DataFrame(s)
 
+def opj(*args):
+    path = './'
+    for a in args:
+        path=os.path.join(path,a)
+    return path
+
 def vc(s):
     _vc = s.value_counts()
     return _vc
