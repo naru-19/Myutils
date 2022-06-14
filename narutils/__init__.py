@@ -1,2 +1,2 @@
 from narutils.narutils import *
-from display_digits import *
+from narutils.display_digits import *

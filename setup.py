@@ -15,7 +15,7 @@ def get_install_requires():
 
 setuptools.setup(
     name="narutils",
-    version="0.1.0",
+    version="0.1.1",
     author="naru-19",
     author_email="narumanage@gmail.com",
     description="You can use narutils",
