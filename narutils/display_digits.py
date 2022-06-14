@@ -40,7 +40,7 @@ def get_digit(x):
     
     return block
         
-def create_num2digit(
+def display_digit(
     n:'input number',
     fix_digit:'Fix the number of digits displayed?'=False,
     nod_fix:'number of digit'=2):
