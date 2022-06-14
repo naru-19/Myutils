@@ -1,3 +1,4 @@
+import numpy as np
 def get_digit(x):
     block=np.zeros((5,3,1))
     if x==1:
