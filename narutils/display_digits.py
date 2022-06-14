@@ -1,5 +1,3 @@
-import numpy as np
-
 def get_digit(x):
     block=np.zeros((5,3,1))
     if x==1:
@@ -40,11 +38,14 @@ def get_digit(x):
     
     return block
         
-def display_digit(
+def num2img(
     n:'input number',
     fix_digit:'Fix the number of digits displayed?'=False,
     nod_fix:'number of digit'=2):
-    margin=int(np.log10(n))
+    if n==0:
+        margin=0
+    else:
+        margin=int(np.log10(n))
     nod=margin+1
     if fix_digit:
         margin=nod_fix-1
@@ -52,10 +53,8 @@ def display_digit(
     margin+=2
     
     digit=np.zeros((7,margin+nod*3,1))
-    print(digit.shape)
     l=1
-    while n>0.1:
-        print(l,n)
+    while nod>0:
         tmp=n//10**(nod-1)
         nod-=1
         digit[1:6,l:l+3]=get_digit(tmp)
